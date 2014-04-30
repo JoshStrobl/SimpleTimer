@@ -1,0 +1,17 @@
+#!/bin/bash
+
+hook(){
+	printf "Post-Compiling Hook:\n"
+
+	allJSFiles=$(find -name "*.js") # Get all Javascript files recursively
+
+	for file in $allJSFiles; do
+		if [[ "$file" != *.min.js ]]; then # If it is not a minified Javascript file, then remove it
+			fileNameWithoutPathRemnant="${file#./}" # Remove the ./ from the directory
+
+			echo "Removing $fileNameWithoutPathRemnant"
+			rm -f "$fileNameWithoutPathRemnant"
+
+		fi
+	done
+}

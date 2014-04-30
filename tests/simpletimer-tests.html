@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		 <title>SimpleTimer Tests</title>
+         <script src="../simpletimer.min.js"></script>
+		</head>
+		<body>
+            <h3>Dude, view the console.</h3>
+            <script>
+                var timer = new SimpleTimer(
+                    {
+                        "action" : function(){
+                            document.title = "Timer executed at: " + Date.now();
+                            console.log("Timer executed at: " + Date.now());
+                        },
+                        "duration" : 2000,
+                        "autostart" : true,
+                        "once" : true
+                    }
+                );
+            </script>
+		</body>
+	</html>
