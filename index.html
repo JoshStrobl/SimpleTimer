@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Simpletimer : SimpleTimer is a lightweight Javascript timer &quot;framework&quot; written in Typescript." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Simpletimer</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/JoshStrobl/SimpleTimer">View on GitHub</a>
+
+          <h1 id="project_title">Simpletimer</h1>
+          <h2 id="project_tagline">SimpleTimer is a lightweight Javascript timer &quot;framework&quot; written in Typescript.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/JoshStrobl/SimpleTimer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/JoshStrobl/SimpleTimer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="simpletimer" class="anchor" href="#simpletimer"><span class="octicon octicon-link"></span></a>SimpleTimer</h1>
+
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>SimpleTimer is a lightweight (<em>as in 2kb compressed</em>) Javascript timer "framework" written in <a href="http://typescriptlang.org">Typescript</a> that abstracts setInterval and setTimeout functionality. SimpleTimer allows you to:</p>
+
+<ol>
+<li>Create autostarting or non-autostarting timers.</li>
+<li>Have a timer that runs only once.</li>
+<li>Start, pause, stop your timer on the fly</li>
+</ol><h3>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h3>
+
+<p>You can <a href="https://github.com/JoshStrobl/SimpleTimer/zipball/master">download the files</a>, run the test(s), etc.</p>
+
+<h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>SimpleTimer is licensed under the Apache v2 License.</p>
+
+<h2>
+<a name="how-can-i-help" class="anchor" href="#how-can-i-help"><span class="octicon octicon-link"></span></a>How can I help?</h2>
+
+<h3>
+<a name="buy-me-a-beer" class="anchor" href="#buy-me-a-beer"><span class="octicon octicon-link"></span></a>Buy me a beer</h3>
+
+<p>Beer in Finland isn't really cheap. No really, the Finnish government has a rather high tax on alcohol. Want features? (<em>not really sure what...but I welcome ideas</em>) Feel free to buy me a beer. You can use <a href="https://gum.co/upeo">Gumroad</a> to pitch in a couple dollars. You won't really get anything special in return, except my thanks.</p>
+
+<h3>
+<a name="other-ways" class="anchor" href="#other-ways"><span class="octicon octicon-link"></span></a>Other ways</h3>
+
+<p>File bug reports, post a discussion, share it on social networks. You can add me on <a href="https://plus.google.com/+JoshuaStrobl">Google+</a> or follow me on <a href="https://twitter.com/JoshStrobl">Twitter</a>.</p>
+
+<h2>
+<a name="using-simpletimer" class="anchor" href="#using-simpletimer"><span class="octicon octicon-link"></span></a>Using SimpleTimer</h2>
+
+<p>The following options are available when defining / creating a timer:</p>
+
+<pre><code>"action" : Function (required) - The function that is executed per timer tick
+"autostart" Boolean (not required, defaults to false) - Whether to autostart the timer or not
+"duration" : Number (required) - The delay per tick in milliseconds
+"once" : Boolean (not required, defaults to false) - Run the timer once
+</code></pre>
+
+<p>Example Timer construction:</p>
+
+<pre><code>var iLikeBacon = new SimpleTimer(
+    {
+        "action" : function(){
+            console.log("I like bacon!");
+        },
+        "autostart" : true,
+        "duration" : 5000
+    }
+);
+</code></pre>
+
+<p>In the timer above, we are executing an action every 5 seconds (5000ms) on a new SimpleTimer that has autostarted.</p>
+
+<h3>
+<a name="properties" class="anchor" href="#properties"><span class="octicon octicon-link"></span></a>Properties</h3>
+
+<p>Only one property so far:</p>
+
+<pre><code>timerActive : Boolean - Is the timer active
+</code></pre>
+
+<h3>
+<a name="methods" class="anchor" href="#methods"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<pre><code>start() - Start the timer
+pause() - Pause the timer
+restart() - Restart the timer
+stop() - Stop the timer
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Simpletimer maintained by <a href="https://github.com/JoshStrobl">JoshStrobl</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
